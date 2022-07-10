@@ -5,52 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-	<style>
-	ul{
-	list-style-type : none;
-	}
-	ul li{
-		font-family: 'Sofia';font-size: 22px;
-	display:inline;
-	}
-	.lit{
-		font-size: 150px;
-
-	}
-	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Use console to play</h1>
-<div>
-<ul>
-<li data-key="17">Control + </li>
-<li  data-key="16">Shift + </li>
-<li  data-key="74">J</li>
-</ul>
+
+<div class ="game">
+	<button value="rock" class="button rock">Rock</button>
+    <button value="paper" class="button paper">Papers</button>
+    <button value="scissors" class="button scissors">Scissors</button>
 </div>
-    <script src ="rps.js"></script>
-	<script>
-	console.log("type game() to start playing!")
-	function lightUp(e){
-		const wrd = document.querySelector(`li[data-key="${e.keyCode}"]`)
-		wrd.style.color="red"
-		wrd.style.transition ="all 1s"
-		wrd.classList.add("lit");
-		//console.log(e.keyCode)
-	}
-
-	function lightDown(e){
-		const wrd = document.querySelector(`li[data-key="${e.keyCode}"]`)
-		wrd.style.color="black";
-		wrd.classList.remove("lit");
-	}
-
-
-
- window.addEventListener('keydown',lightUp)
- window.addEventListener('keyup',lightDown)
-
-	</script>
+<div class ="show">
+    <p>Computer Plays : <span id="compChoice"><b>Click on a button!</b></span></p>
+</div>
+    <script src ="rps-ui.js"></script>
 </body>
 </html>
